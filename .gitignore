@@ -1,0 +1,101 @@
+###############################################################################
+#  Root .gitignore for multi-project C++ / OpenGL repo                        #
+#  Works in any subfolder (Project1, Project2, …)                             #
+###############################################################################
+
+#------------------------------------------------------------------------------
+# 1.  Visual Studio solution & user files (any depth)
+#------------------------------------------------------------------------------
+**/.vs/
+**/*.suo
+**/*.user
+**/*.userosscache
+**/*.sln.docstates
+*.VC.db
+
+#------------------------------------------------------------------------------
+# 2.  Build artefacts (MSVC, MSBuild, CMake, Ninja) - recursive
+#------------------------------------------------------------------------------
+# Object & debug files
+**/*.obj
+**/*.o
+**/*.lo
+**/*.idb
+**/*.pdb
+**/*.ipdb
+**/*.ilk
+**/*.exp
+**/*.iobj
+**/*.ipch
+**/*.pch
+**/*.tlog
+**/*.log
+
+# Compiled libraries & executables
+**/*.lib
+**/*.a
+**/*.dll
+**/*.so
+**/*.dylib
+**/*.exe
+**/*.app
+**/*.out
+
+# MSVC default output directories
+**/Debug/
+**/Release/
+**/x64/
+**/Win32/
+**/ARM*/
+
+# CMake cache/build (if you create them anywhere)
+**/build/
+**/CMakeCache.txt
+**/CMakeFiles/
+
+#------------------------------------------------------------------------------
+# 3.  Package-manager artefacts
+#------------------------------------------------------------------------------
+# vcpkg
+**/vcpkg_installed/
+# Conan
+conanfile.lock
+**/conan*.txt
+# Ninja
+**/*.ninja_log
+**/*.ninja_deps
+
+#------------------------------------------------------------------------------
+# 4.  Third-party or pre-built libraries
+#------------------------------------------------------------------------------
+# Generic folder where you keep downloaded binaries
+**/libraries/
+# OpenGL / GLAD generated sources
+**/glad.c
+**/glad.h
+**/glad/**
+**/gl/**
+
+#------------------------------------------------------------------------------
+# 5.  IDE / editor / OS noise
+#------------------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Linux backup files
+*~
+
+#------------------------------------------------------------------------------
+# 6.  Misc
+#------------------------------------------------------------------------------
+# Crash dumps & profiling
+**/*.dmp
+**/*.vsp*
+# Coverage data
+**/*.gcno
+**/*.gcda
