@@ -28,5 +28,22 @@ int main(){
     for(const auto &x:some){
         cout<<"After sorting "<<x<<endl;
     }
+    
+    
+    vector <vector<int>> cube = {10,vector<int>(10)};
+    int k =0;
+    for(auto &y:cube){
+        for(int j =0;j<10;j++){
+            y.at(j) = k++;
+            
+        }
+    }
+    for(const auto &x:cube){
+        for(const auto &y:x){
+            cout<<y<<" ";
+        }
+    }
+    
+    
     return 0;
 }
